@@ -8,6 +8,7 @@ Extended tab switcher for Sublime Text
 
 * On pressing `ctrl+alt+tab` all open files will be displayed for selection.
 * On pressing `ctrl+alt+shift+tab` only open files in the active group will be displayed for selection.
+* On pressing `delete` while the tab switcher is shown, the highlighted file will be closed, if it has no modifications.
 
 
 User can change the default key binding at `Preferences -> Package Settings -> Extended Tab Switcher -> Key Bindings User`
@@ -48,21 +49,36 @@ User can overwrite the following configurations by adding flags in the User - Se
 
 	```javascript
 	{
-		"mark_dirty_file_char": "<your-char>" 
+		"mark_dirty_file_char": "<your-char>"
 	}
 
 	```
 
-* Show full file path 
-	
-	By default the files listed will contain only the filename, This can be overwritten by adding the following flag in the settings
+* Show full file path
+
+	By default the files listed will contain only the filename, This can be
+	overwritten by adding the following flag in the settings. If set to true, the
+	path will be listed below the filename. If set to "first", the path will be
+	listed above the filename.
 
 	```javascript
 	{
-		"show_full_file_path": true 
+		"show_full_file_path": true
 	}
 
 	```
+
+* Make the file display more compact
+
+	By default, each file gets two lines of information in the switcher panel. Show only the first line by setting the following flag in the settings
+
+	```javascript
+	{
+		"compact_panel": true
+	}
+
+	```
+
 
 
 ## Credits

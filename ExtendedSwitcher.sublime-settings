@@ -1,5 +1,5 @@
 {
-	// sort the files 
+	// sort the files
 	"sort": true,
 
 	// Don't list current file?
@@ -9,7 +9,11 @@
 	// Also handy for filterig dirty files, if you type this string while the list is visible:
 	"mark_dirty_file_char" : "*",
 
-	//show full path with the filename
-	"show_full_file_path": true
-}
+	// If true, shows the full file path on the second row of the quick panel
+	// If equal to "first", shows the full file path on the first row  of the quick
+	//    panel, with the filename on the second
+	"show_full_file_path": true,
 
+	// If true, only shows one row per file in the quick switcher.
+	"compact_panel": false
+}
