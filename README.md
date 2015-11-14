@@ -64,6 +64,16 @@ User can overwrite the following configurations by adding flags in the User - Se
 
 	```
 
+* Open tabs in the current pane
+
+	By default, selecting a file will focus its view in its current position. When the following flag is set to true, the view will be moved into the currently active pane.
+
+	```javascript
+	{
+		"move_to_current_pane": false
+	}
+
+	```
 
 ## Credits
 
