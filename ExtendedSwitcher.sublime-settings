@@ -3,7 +3,7 @@
 	"sort": true,
 
 	// Don't list current file?
-	"skip_current_file" : false,
+	"skip_current_file" : true,
 
 	// As a visual helper, you can add a string to mark dirty files.
 	// Also handy for filterig dirty files, if you type this string while the list is visible:
@@ -12,12 +12,12 @@
 	// If true, shows the full file path on the second row of the quick panel
 	// If equal to "first", shows the full file path on the first row  of the quick
 	//    panel, with the filename on the second
-	"show_full_file_path": true,
+	"show_full_file_path": "first",
 
 	// When set to true, the tab will be moved to the currently active
 	// pane, in case it was elsewhere.
 	"move_to_current_pane": true,
 
 	// If true, only shows one row per file in the quick switcher.
-	"compact_panel": false
+	"compact_panel": true
 }
