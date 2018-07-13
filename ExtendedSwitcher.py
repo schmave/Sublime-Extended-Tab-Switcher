@@ -1,4 +1,8 @@
-import sublime, sublime_plugin, os
+import os
+import random
+
+import sublime
+import sublime_plugin
 
 last_highlighted_view = None
 
@@ -76,14 +80,15 @@ class ExtendedSwitcherCommand(sublime_plugin.WindowCommand):
                     self.open_files.append(["Untitled"+self.settings.get('mark_dirty_file_char'), ''])
                 else:
                     self.open_files.append(["Untitled", ''])
-            # Add a reference to the view as the third element within each open_files element
-            self.open_files[-1].append(f)
+            # Add a random number as the third element within each open_files element so
+            # that the view (added next), is never used for sorting
+            self.open_files[-1].extend([random.random(), f])
 
         if self.check_for_sorting():
             self.open_files.sort()
-            self.open_views = [x[2] for x in self.open_files]
+            self.open_views = [x[3] for x in self.open_files]
 
-        # Strip off the view reference
+        # Strip off the random number and view reference
         self.open_files = [x[:2] for x in self.open_files]
 
         if self.settings.get('show_full_file_path') == "first":
